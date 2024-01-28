@@ -1,0 +1,47 @@
+/*
+#include <stdio.h>
+int soma (int a, int b){
+    return a+b;
+}
+int subtracao (int a, int b){
+    return a-b;
+}
+int multiplicacao (int a, int b){
+    return a*b;
+}
+int divisao (int a, int b){
+    return a/b;
+}
+int calcula (int x, int y, int(*operacao)(int,int)){
+    return (*operacao)(x,y);
+}
+
+int main() {
+int opcao;
+int n1,n2;
+printf("Digite a Operação que deseja realizar:\n");
+printf("1- Soma, 2- Subtração, 3- Multiplicação, 4- Divisão:\n");
+scanf("%d",&opcao);
+printf("Digite dois números para serem integrados:\n");
+scanf("%d", &n1);
+scanf("%d", &n2);
+switch (opcao){
+    case 1:
+    int resultadosoma = calcula (n1,n2,soma);
+    printf ("Resultado:%d\n",resultadosoma);
+    break;
+    case 2:
+    int resultadosub = calcula (n1,n2,subtracao);
+    printf ("Resultado:%d\n",resultadosub);
+    break;
+    case 3:
+    int resultadomult = calcula (n1,n2,multiplicacao);
+    printf ("Resultado:%d\n",resultadomult);
+    break;
+    case 4:
+    int resultadodiv = calcula (n1,n2,divisao);
+    printf ("Resultado:%d\n",resultadodiv);
+    break; 
+}
+}
+*/
