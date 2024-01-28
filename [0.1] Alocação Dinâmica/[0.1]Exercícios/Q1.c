@@ -26,7 +26,7 @@ int main() {
     char *sexo = (char *)malloc(pessoas * sizeof(char));
     char *feedback = (char *)malloc(pessoas * sizeof(char));
     if (sexo == NULL || feedback == NULL) {
-        printf("Erro na alocação de memória.\n");
+        printf("Erro na alocaçao de memoria.\n");
         return 1; 
     }
 
@@ -73,7 +73,7 @@ int main() {
 
 
     if (totalmulheres == 0){
-        printf("ao ha mulheres na pesquisa");
+        printf("Nao ha mulheres na pesquisa");
     } else {
          printf("\nPorcentagem de mulheres que gostaram do produto: %.2f%%\n", porcentagemMulheresGostaram);   
     }
@@ -83,9 +83,7 @@ int main() {
           printf("Porcentagem de homens que nao gostaram do produto: %.2f%%\n", porcentagemHomensNaoGostaram);  
     }
 
-    // Libere a memória alocada dinamicamente
     free(sexo);
     free(feedback);
-
     return 0;
 }
