@@ -1,0 +1,108 @@
+//Código 1 - Statico
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct pessoa{
+    char nome[50];
+    int idade;
+}Pessoa;
+void dados_pessoa(Pessoa *p){
+//   Função que preenche os dados de uma variável
+//  do tipo Pessoa (Struct)
+    
+    printf("Informe o nome:\t");
+    scanf(" %[^\n]", p->nome);
+    printf("Informe a idade:\t");
+    scanf("%d",&p->idade);
+}
+int main (void){
+    Pessoa pessoa;
+    dados_pessoa (&pessoa);
+    return 0;
+};
+*/
+
+//Código 2-Dinâmico
+/*
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct pessoa{
+    char nome[50];
+    int idade;
+}Pessoa;
+void dados_pessoa(Pessoa *p){
+    printf("Informe o nome:\t");
+    scanf(" %[^\n]", p->nome);
+    printf("Informe a idade:\t");
+    scanf("%d",&p->idade);
+}
+int main (void){
+    Pessoa *pessoa = malloc (sizeof(Pessoa));
+    dados_pessoa (pessoa);
+    free(pessoa);
+    return 0;
+};
+*/
+
+/*
+Estrutura Union: Apenas uma única variável é armazenada na memória;
+*/
+
+//Código 3
+/*
+#include <stdio.h>
+#include <stdlib.h>
+//Estrututra union;
+typedef union tipodados {
+    int meu_int;
+    float meu_float;
+}Dados;
+int main (void){
+    Dados uniao;
+    printf("Digite os dados:\t");
+    scanf("%f %d", &uniao.meu_float, &uniao.meu_int);
+    printf("Os dados informados: meu_int = %d meu_float=%f", uniao.meu_int, uniao.meu_float);
+    return 0;
+};
+*/
+
+//Código 4
+/*
+#include <stdio.h>
+#include <stdlib.h>
+//Estrutura para armazenar um documento por vez
+typedef union documentos{
+    char rg[15];
+    char cpf[15];
+}Documentos;
+typedef struct pessoa{
+    char nome[50];
+    int idade;
+    Documentos doc; // Variável para armazenar o CPF ou RG    
+}Pessoa;
+void dados_pessoa(Pessoa *p){
+   int op;
+    printf("Informe o nome:\t");
+    scanf(" %[^\n]", p->nome);
+    printf("Informe a idade:\t");
+    scanf("%d",&p->idade);
+    printf("Informe o documento: CPF ou RG\t");
+    printf("\n1-CPF, 2-RG:\t");
+    scanf("%d", &op);
+    if (op==1){
+        printf("Digite o CPF\n");
+        scanf(" %[^\n]", p->doc.cpf);
+    } else{
+        printf("Digite o RG\n");
+        scanf(" %[^\n]", p->doc.rg);
+    }
+}
+int main (void){
+    Pessoa *pessoa = malloc (sizeof(Pessoa));
+    dados_pessoa (pessoa);// Função recebe o endereço da variável
+    printf("CPF = %s \n RG=%s", pessoa->doc.cpf, pessoa->doc.rg);
+    free(pessoa);
+    return 0;
+};
+*/

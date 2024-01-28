@@ -1,0 +1,39 @@
+//Código 1 - Programa que pergunta se o usuário gosta de algoritmos com as constantes 0 para TRUE e 1 para FALSE
+
+/* 
+#include <stdio.h>
+//Constante
+#define True 0
+#define False 1
+int main (Void){
+    int resposta;
+    printf("Você gosta de algoritimos? \n 0- Verdadeiro \n 1- Falso\n");
+    scanf("%d", &resposta);
+    if (resposta==True){
+        printf("Boa escolha");
+    } else if (resposta==False) {
+        printf("Que pena! \n");
+           }
+    return 0;
+} */
+
+//Código 2 - Programa que pergunta se o usuário gosta de algoritmos com Boolean
+/*
+#include <stdio.h>
+//Enumeração
+typedef enum bool {
+    true,
+    false
+}Bool;
+int main (Void){
+    Bool resposta; 
+    printf("Você gosta de algoritimos? \n 0- Verdadeiro \n 1- Falso\n");
+    scanf("%d", &resposta);
+    if (resposta==true){
+        printf("Boa escolha");
+    } else if (resposta==false) {
+        printf("Que pena! \n");
+           }
+    return 0;
+}
+*/
