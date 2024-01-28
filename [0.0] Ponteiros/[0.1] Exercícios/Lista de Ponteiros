@@ -1,0 +1,40 @@
+/*
+Questão 1
+X será igual a 3 uma vez diminuído, *p será 4 por que é atualizado  no final '(*p) += x;' e Y também será 4 já que o ponteiro *p
+guarda o endereço de Y.
+
+Questão 2
+No código apresentado, a setença "p=x" está errada, assim como emitir os valores do ponteiro e o endereço do ponteiro.
+para o código ser bem sucedido, a linha 3 precisa estar "p=&x"(Ponteiro P, recebe o Endereço de X) e o printf deve estar:
+"printf("Valor de p = %d\tValor de *p = %d", &p, *p);" (Retirase o %p para o %d, e coloca-se o * em p para represençar o endereço).
+Então emitirá que o valor de p é o endereço localizado, e o valor de *p é 100 (Atribuído no Código).
+
+Questão 3
+Os resultados serão 11, 20, 10, 30. A progressão sendo, *p1 declarado inteiro, *p2 declarado inteiro com o endereço de a, *p3
+declarado inteiro recebendo o endereço de c. p1=p2 (Ponteiro 1 igual ao 2), *p2 igual a 10, variável b atribuido 20. Logo depois
+vem o ponteiro de ponteiros *pp que recebe o endereço de p1, seguido disso e dito que o *p3 é igual ao ponteiro de ponteiros,
+seguido de uma outra declaração de ponteiro inteiro armazenando o endereço de D. d vai passar a ser o valor de b (20) + (*p1=10)++; 
+Ponteiro *p1 esse que vai ser atualizado passando a ser 11.
+Então ficamos com A = 11 (*p1=10+1), B = 20 (Atribuido dentro do código),  C = 10 (*p2=10) e D = 30 (*p4 = b+ (*p1)++) 
+
+Questão 4
+/*
+#include <stdio.h>
+#include <math.h>
+
+
+void calcula_hexagonoregular(float l, float *area, float *perimetro){
+    *area = ((3 * pow(l,2) * sqrt(3))/2); // Formula do Calculo a área de um triangulo regular, pow = potencia (l^2), sqrt = Raiz
+    *perimetro = 6*l; // Formula do perímetro (Soma de todos os lados)
+}
+int main(void) {
+float lado, area, perimetro;
+
+printf("Digite o comprimento do lado do hexagono regular:");
+scanf("%f",&lado);
+calcula_hexagonoregular(lado, &area,&perimetro);
+printf("A Area do Hexagono regular e: %.2f\n", area);
+printf("O Perimetro do Hexagono regular e: %.2f\n",perimetro);
+return 0;
+}
+*/
